@@ -12,11 +12,6 @@ class Solution {
         
         if (b) return arr;
         
-        List<Integer> answer = new ArrayList<>();
-        
-        for (int i=0; i<arr.length; i++) { answer.add(arr[i]); }
-        for (int i=0; i<len-arr.length; i++) { answer.add(0); }
-        
-        return answer.stream().mapToInt(Integer::intValue).toArray();
+        return Arrays.copyOf(arr, len);
     }
 }
